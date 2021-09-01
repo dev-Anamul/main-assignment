@@ -1,0 +1,431 @@
+/* default CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.container {
+  width: 1300px;
+  margin: 0 auto;
+}
+body {
+  font-family: sans-serif;
+}
+button {
+  cursor: pointer;
+}
+
+/* ///// ===== >>>>> header CSS */
+li:hover > a {
+  color: #c59353;
+}
+.header__section {
+  background-image: url(img/ia_200000019.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  padding: 350px 0;
+  position: relative;
+}
+.header__section::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 9;
+}
+.active {
+  color: #c59353 !important;
+}
+.header__box {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99999;
+}
+.header__logo {
+  width: 30%;
+}
+.header__logo__img {
+}
+.header__menu {
+  width: 70%;
+}
+.menu__item {
+  display: inline-block;
+  margin-left: -5px;
+  position: relative;
+}
+
+.menu__link {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  padding: 25px 20px;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  position: relative;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.menu__link::after {
+  content: "";
+  width: 100%;
+  height: 4px;
+  background-color: #c59353;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transform: scale(0);
+  -webkit-transform: scale(0);
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -o-transform: scale(0);
+  transform-origin: center center;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+
+.menu__link:hover::after {
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -o-transform: scale(1);
+}
+.menu__link:hover {
+  color: #c59353;
+}
+.header__content {
+  position: relative;
+  z-index: 99;
+}
+.header__content__main {
+  font-size: 100px;
+  color: #fff;
+  margin: 0;
+}
+.header__content__sub {
+  font-size: 30px;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 500;
+  position: relative;
+}
+.header__content__sub > span {
+  height: 2px;
+  width: 100px;
+  background-color: #fff;
+  position: absolute;
+  top: 65%;
+  left: 0;
+  z-index: 99;
+}
+.header__content__sub > span:first-child {
+  left: 35%;
+}
+.header__content__sub > span:last-child {
+  left: 60%;
+}
+.header__content__btn {
+  border: none;
+  outline: none;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #c59353;
+  padding: 20px 45px;
+  margin-top: 40px;
+  border-radius: 100px;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.header__content__btn:hover {
+  color: #c59353;
+  background-color: #fff;
+}
+.menu__item:hover .drop__list {
+  transform: scaleY(1);
+  -webkit-transform: scaleY(1);
+  -moz-transform: scaleY(1);
+  -ms-transform: scaleY(1);
+  -o-transform: scaleY(1);
+}
+
+/* /////// ===== >>>>> drop down CSS here */
+.drop__list {
+  position: absolute;
+  top: 95%;
+  left: -13%;
+  width: 250px;
+  background-color: #fff;
+  text-align: center;
+  transform: scaleY(0);
+  -webkit-transform: scaleY(0);
+  -moz-transform: scaleY(0);
+  -ms-transform: scaleY(0);
+  -o-transform: scaleY(0);
+  transform-origin: center;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  z-index: 99999;
+}
+.drop__item {
+  display: block;
+}
+.drop__link {
+  text-decoration: none;
+  display: block;
+  color: #000;
+  padding: 20px 0;
+  font-size: 20px;
+  transition: all 0.5s;
+  font-family: sans-serif;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+}
+.drop__link:hover {
+  color: #c59353;
+  background-color: #ddd;
+}
+/* ////// ====== >>>>>>> main section css */
+main {
+  background-color: #f8f8f8;
+}
+
+/* ////// ====== >>>>>> service CSS */
+.service {
+  padding: 100px 0;
+}
+.service__card__box {
+}
+.service__card__item {
+  padding: 40px 20px;
+  width: 23%;
+  background-color: #fff;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.service__card__item:hover .service__card__img {
+  transform: rotateY(360deg);
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+}
+.service__card__item:hover {
+  background-color: #e8e6e4;
+}
+.service__card__item:hover .service__card__btn {
+  background-color: #fff;
+  color: #c59353;
+}
+.service__card__item:not(:last-child) {
+  margin-right: 2.66%;
+}
+.service__card__img {
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.service__card__heading {
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+}
+.service__card__text {
+  padding: 0 15px;
+}
+.service__card__btn {
+  background-color: #c69453;
+  color: #fff;
+  display: inline-block;
+  border: none;
+  outline: none;
+  padding: 15px 20px;
+  margin-top: 50px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-family: inherit;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.service__card__btn:hover {
+  background-color: #000 !important;
+  color: #fff !important;
+  transform: translateY(20px);
+  -webkit-transform: translateY(20px);
+  -moz-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  -o-transform: translateY(20px);
+}
+
+/* ////// ======= >>>>>> about */
+.about {
+  padding: 100px 0;
+}
+.about__video__box {
+  width: 48%;
+}
+.about__video {
+  width: 100%;
+  height: 330px;
+}
+.about__video > * {
+  width: 100%;
+  height: 100%;
+}
+.about__content {
+  width: 48%;
+}
+.about__content__heading {
+  margin-top: 0;
+}
+.about__content__heading > span {
+  color: #c59353;
+  margin-left: -8px;
+}
+.about__content__text {
+}
+.about__content__btn {
+  border: none;
+  outline: none;
+  display: inline-block;
+  background-color: #000;
+  color: #fff;
+  padding: 10px 15px;
+  margin-top: 20px;
+  font-family: inherit;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -ms-transition: all 0.4s;
+  -o-transition: all 0.4s;
+}
+.about__content__btn:hover {
+  background-color: #c59353;
+  color: #fff;
+}
+
+/* ////// ====== >>>>>> cotnact CSS */
+.contact {
+  padding: 200px 0;
+  background-image: url(img/ia_200000022.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right center;
+}
+.contact__form__box {
+  width: 50%;
+}
+.contact__form__heading__content {
+}
+.contact__heading {
+  text-transform: uppercase;
+}
+.contact__text {
+}
+.contact__form {
+  width: 100%;
+  margin-top: 40px;
+}
+.contact__form > * {
+  width: 99.8%;
+  margin: 25px 0;
+  display: block;
+  padding: 20px 20px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+.contact__form > .input__msg {
+  height: 100px;
+}
+.contact__form > input:last-child {
+  width: 20%;
+  background-color: #c59353;
+  color: #fff;
+  margin-top: 20px;
+}
+.input__msg {
+}
+.contact__img__box {
+  width: 50%;
+  /* height: 500px;
+  background-image: url(img/ia_200000022.jpg);
+  background-size: cover; */
+}
+.contact__img {
+  /* width: 100%; */
+  height: 500px;
+  object-fit: contain;
+}
+
+/* ///// ===== >>>>> footer CSS */
+.footer {
+  background-color: #6d6d6d;
+  padding: 20px 150px;
+  color: #fff;
+}
+.footer__text {
+  width: 50%;
+}
+.footer__text > p {
+}
+.footer__social__menu {
+  width: 50%;
+}
+.footer__social__menu > * {
+  margin: 0 15px;
+}
